@@ -16,7 +16,7 @@
     <![endif]-->
     <link rel="shortcut icon" href="../images/ico/favicon.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="lab1.js"></script>
     <!--<link href="lab1.css" rel="stylesheet">-->
     <title>Lab 1</title>
     <link href="lab1.css" rel="stylesheet">
@@ -24,6 +24,8 @@
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip()
         });
+
+
     </script>
 </head>
 <body>
@@ -104,13 +106,15 @@
     <br>
     <div class="row">
         <div class="col-sm-12">
-            <form id="myform1" class="form-horizontal">
-                <legend>Thêm sinh viên</legend>
-                <div class="cangiua col-sm-9">
+            <div class="col-sm-2"></div>
+            <div class="center cangiua col-sm-8">
+                <form id="myform1" class="form-horizontal">
+                    <legend>Thêm sinh viên</legend>
                     <div class="one">
                         <label class="control-label lb col-sm-3"><span class="sp">Mã số sinh viên *</span></label>
                         <div class="input-group col-sm-8">
-                            <span class="input-group-addon"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-question-circle-o"
+                                                               aria-hidden="true"></i></span>
                             <input data-toggle="tooltip" data-placement="bottom" title="Nhập mã số sinh viên"
                                    type="text" class="form-control" placeholder="Mã số sinh viên"
                                    aria-describedby="basic-addon2" required>
@@ -121,8 +125,8 @@
                         <label class="control-label lb col-sm-3"><span class="sp">Họ và tên *</span></label>
                         <div class="input-group col-sm-8">
                             <span class="input-group-addon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                            <input  data-toggle="tooltip" data-placement="bottom"
-                                    title="Nhập họ và tên" type="text" class="form-control" placeholder="Họ và tên"
+                            <input data-toggle="tooltip" data-placement="bottom"
+                                   title="Nhập họ và tên" type="text" class="form-control" placeholder="Họ và tên"
                                    aria-describedby="basic-addon2" required>
                         </div>
                     </div>
@@ -131,8 +135,8 @@
                         <label class="control-label lb col-sm-3"><span class="sp">Lớp *</span></label>
                         <div class="input-group col-sm-8">
                             <span class="input-group-addon "><i class="fa fa-th" aria-hidden="true"></i></span>
-                            <input  data-toggle="tooltip" data-placement="bottom"
-                                    title="Nhập lớp" type="text" class="form-control" placeholder="Lớp"
+                            <input data-toggle="tooltip" data-placement="bottom"
+                                   title="Nhập lớp" type="text" class="form-control" placeholder="Lớp"
                                    aria-describedby="basic-addon2" required>
                         </div>
                     </div>
@@ -144,19 +148,19 @@
                              title="Chọn ngày tháng năm sinh">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <select class="form-control ">
+                                    <select class="form-control " id="ngay">
                                         <option value="">Ngày</option>
                                     </select>
                                 </div>
 
                                 <div class="col-sm-3">
-                                    <select class="form-control col-sm-3">
+                                    <select class="form-control col-sm-3" id="thang">
                                         <option value="">Tháng</option>
                                     </select>
                                 </div>
 
                                 <div class="col-sm-3">
-                                    <select class="form-control col-sm-3">
+                                    <select class="form-control col-sm-3" id="nam">
                                         <option value="">Năm</option>
                                     </select>
                                 </div>
@@ -164,8 +168,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="one">
                         <label class="control-label lb col-sm-3"><span class="sp">Giới tính *</span></label>
                         <div class="input-group col-sm-8" data-toggle="tooltip" data-placement="bottom"
@@ -183,67 +185,50 @@
 
                         </div>
                     </div>
-
-
                     <div class="one">
                         <label class="control-label lb col-sm-3"><span class="sp">Quê quán *</span></label>
-                        <div class="input-group col-sm-8"  data-toggle="tooltip" data-placement="bottom"
+                        <div class="input-group col-sm-8" data-toggle="tooltip" data-placement="bottom"
                              title="Chọn các thành phần để hoàn thiện thông tin quê quán">
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <input class="form-control" type="text"
-                                           placeholder="Số nhà, đường, khu phố, phường..." required>
-                                </div>
-
-                                <div class="col-sm-3">
-                                    <select class="form-control col-sm-3">
-                                        <option value="">Quận 20</option>
+                                <div class="col-sm-4">
+                                    <select class="form-control ">
+                                        <option value="">Tỉnh, thành phố</option>
+                                        <option value="">TPHCM</option>
+                                        <option value="">Bến tre</option>
                                     </select>
                                 </div>
-
-                                <div class="col-sm-3">
+                                <div class="col-sm-4">
                                     <select class="form-control ">
-                                        <option value="">TPHCM</option>
+                                        <option value="">Phường, xã</option>
+                                        <option value="">Linh trung</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <select class="form-control col-sm-3">
+                                        <option value="">Quận, huyện</option>
+                                        <option value="">Quận 1</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="one">
+                        <div class="col-sm-2"></div>
                         <div class="input-group col-sm-8">
                             <center>
-                                <button class="btn btn-info" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i> Thêm</button>
+                                <button class="btn btn-info" type="submit"><i class="fa fa-plus-circle"
+                                                                              aria-hidden="true"></i> Thêm
+                                </button>
 
-                                <button class="btn btn-danger" type="reset"><i class="fa fa-times" aria-hidden="true"></i> Hủy</button>
+                                <button class="btn btn-danger" type="reset"><i class="fa fa-times"
+                                                                               aria-hidden="true"></i> Hủy
+                                </button>
                             </center>
                         </div>
                     </div>
-
-
-                </div>
-
-
-            </form>
+                </form>
+            </div>
         </div>
-
-
-        <!--<div class="col-sm-6">-->
-        <!--<form id="myform2" class="form-horizontal">-->
-        <!--<legend>Thêm sinh viên</legend>-->
-        <!--<div class="center col-sm-11">-->
-        <!--<label class="control-label lb col-sm-3">Mã số sinh viên</label>-->
-        <!--<div class="input-group col-sm-8">-->
-        <!--<span class="input-group-addon" id="basic-addon2">Icon mã</span>-->
-        <!--<input type="text" class="form-control" placeholder="Mã số sinh viên"-->
-        <!--aria-describedby="basic-addon2">-->
-        <!--</div>-->
-        <!--</div>-->
-
-        <!--<input type="submit" value="Thêm">-->
-
-        <!--</form>-->
-        <!--</div>-->
     </div>
 </div>
 
