@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap.min.js"></script>
+    <link href="../../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../js/html5shiv.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../images/ico/favicon.ico">
+
+    <script src="lab1.js"></script>
+    <!--<link href="lab1.css" rel="stylesheet">-->
+    <title>Lab 1</title>
+    <link href="lab1.css" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+            $("#header").load("../menu.txt");
+            $("#ft").load("../footer.txt");
+        });
+
+
+    </script>
+</head>
+<body>
+<header id="header">
+
+</header>
+
+<div class="container">
+    <br>
+    <h3>Đây là bài tập lab1.</h3>
+    <a href="lab1.psd" class="btn btn-default">Tải xuống file psd</a>
+    <br>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-2"></div>
+            <div class="center cangiua col-sm-8">
+                <form id="myform1" class="form-horizontal">
+                    <fieldset>
+                        <legend>Thêm sinh viên</legend>
+                        <div class="one">
+                            <label class="control-label lb col-sm-3"><span class="sp">Mã số sinh viên <span
+                                    style="color: red">*</span></span></label>
+                            <div class="input-group col-sm-8">
+                            <span class="input-group-addon"><i class="fa fa-question-circle-o"
+                                                               aria-hidden="true"></i></span>
+                                <input data-toggle="tooltip" data-placement="bottom" title="Nhập mã số sinh viên"
+                                       type="text" class="form-control" placeholder="Mã số sinh viên"
+                                       aria-describedby="basic-addon2" required>
+                            </div>
+                        </div>
+
+                        <div class="one">
+                            <label class="control-label lb col-sm-3"><span class="sp">Họ và tên <span
+                                    style="color: red">*</span></span></label>
+                            <div class="input-group col-sm-8">
+                                <span class="input-group-addon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                                <input data-toggle="tooltip" data-placement="bottom"
+                                       title="Nhập họ và tên" type="text" class="form-control" placeholder="Họ và tên"
+                                       aria-describedby="basic-addon2" required>
+                            </div>
+                        </div>
+
+                        <div class="one">
+                            <label class="control-label lb col-sm-3"><span class="sp">Lớp <span
+                                    style="color: red">*</span></span></label>
+                            <div class="input-group col-sm-8">
+                                <span class="input-group-addon "><i class="fa fa-th" aria-hidden="true"></i></span>
+                                <input data-toggle="tooltip" data-placement="bottom"
+                                       title="Nhập lớp" type="text" class="form-control" placeholder="Lớp"
+                                       aria-describedby="basic-addon2" required>
+                            </div>
+                        </div>
+
+
+                        <div class="one">
+                            <label class="control-label lb col-sm-3"><span class="sp">Ngày sinh <span
+                                    style="color: red">*</span></span></label>
+                            <div class="input-group col-sm-8" data-toggle="tooltip" data-placement="bottom"
+                                 title="Chọn ngày tháng năm sinh">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <select class="form-control " id="ngay">
+                                            <option value="">Ngày</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <select class="form-control col-sm-3" id="thang">
+                                            <option value="">Tháng</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <select class="form-control col-sm-3" id="nam">
+                                            <option value="">Năm</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <label class="control-label lb col-sm-3"><span class="sp">Giới tính <span
+                                    style="color: red">*</span></span></label>
+                            <div class="input-group col-sm-8" data-toggle="tooltip" data-placement="bottom"
+                                 title="Chọn giới tính. Nếu không xác đinh được thì chọn khác">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div>
+                                            Nam <input type="radio" name="gt"/>
+                                            Nữ <input type="radio" name="gt"/>
+                                            Khác <input type="radio" name="gt"/>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <label class="control-label lb col-sm-3"><span class="sp">Quê quán <span
+                                    style="color: red">*</span></span></label>
+                            <div class="input-group col-sm-8" data-toggle="tooltip" data-placement="bottom"
+                                 title="Chọn các thành phần để hoàn thiện thông tin quê quán">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control ">
+                                            <option value="">Tỉnh, thành phố</option>
+                                            <option value="">TPHCM</option>
+                                            <option value="">Bến tre</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select class="form-control col-sm-3">
+                                            <option value="">Quận, huyện</option>
+                                            <option value="">Quận 1</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select class="form-control ">
+                                            <option value="">Phường, xã</option>
+                                            <option value="">Linh trung</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <div class="col-sm-2"></div>
+                            <div class="input-group col-sm-8">
+                                <center>
+                                    <button class="btn btn-info" type="submit"><i class="fa fa-plus-circle"
+                                                                                  aria-hidden="true"></i> Thêm
+                                    </button>
+                                    <button class="btn btn-danger" type="reset"><i class="fa fa-times"
+                                                                                   aria-hidden="true"></i> Hủy
+                                    </button>
+                                </center>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <img src="lab1.jpg" title="hinh anh">
+    </div>
+</div>
+<br><br>
+<div id="ft">
+
+</div>
+</body>
+</html>
