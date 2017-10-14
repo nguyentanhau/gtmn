@@ -4,7 +4,7 @@
             <div class="col-md-6 col-sm-12">
                 <div class="widget">
                     <h3>Giới thiệu</h3>
-
+                    <p>Nguyen  tan hau</p>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
