@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập lab2</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap.min.js"></script>
+    <link href="../../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../js/html5shiv.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../images/ico/favicon.ico">
+    <script src="lab2.js"></script>
+    <link href="lab2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("../../menu.html");
+            $("#ft").load("../../footer.html");
+
+            $("#viewhienthuc").hide();
+            $("#viewyeucau").show();
+            $("#viewthietke").hide();
+
+            $("#yeucau").on('click', function () {
+                $("#viewhienthuc").hide();
+                $("#viewyeucau").show();
+                $("#viewthietke").hide();
+            });
+            $("#thietke").on('click', function () {
+                $("#viewhienthuc").hide();
+                $("#viewyeucau").hide();
+
+                $("#viewus").show();
+                $("#viewform").hide();
+                $("#viewfile").hide();
+
+
+                $("#viewthietke").show();
+            });
+            $("#hienthuc").on('click', function () {
+                $("#viewhienthuc").show();
+                $("#viewyeucau").hide();
+                $("#viewthietke").hide();
+            });
+
+            $("#us").on('click',function () {
+                $("#viewus").show();
+                $("#viewform").hide();
+                $("#viewfile").hide();
+            });
+            $("#file").on('click',function () {
+                $("#viewus").hide();
+                $("#viewform").hide();
+                $("#viewfile").show();
+            });
+            $("#form").on('click',function () {
+                $("#viewus").hide();
+                $("#viewform").show();
+                $("#viewfile").hide();
+            });
+
+        });
+    </script>
+</head>
+<body>
+<header id="header">
+
+</header>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-info" id="yeucau">Yêu cầu lab2</button>
+            <button class="btn btn-info" id="thietke">Thiết kế</button>
+            <button class="btn btn-info" id="hienthuc">Hiện thực</button>
+        </div>
+        <br><br><hr>
+        <div class="row">
+            <div class="col-sm-12" id="viewyeucau">
+                <p>Yêu cầu lab2</p>
+                <p>(1) Tạo ra một user scenario</p>
+                <p>(2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện Web trên Photoshop (hoặc bất cứ công
+                    cụ nào)  tạo ra file html tương ứng của thiết kế này.</p>
+                <p>(3)Upload lên Azure: trong file html có chèn hình ảnh của user scenario ở (1) và đường dẫn của file
+                    thiết kế ở (2).</p>
+            </div>
+            <div class="col-sm-12" id="viewthietke">
+                <button id="us" class="btn btn-default">User scenario</button>
+                <button id="form" class="btn btn-default">Form chọn film</button>
+                <button id="file" class="btn btn-default">File thiết kế</button>
+                <div id="viewus">
+                    đây là us
+                </div>
+                <div id="viewform">
+                    đây là form
+                </div>
+                <div id="viewfile">
+                    đây là file
+                </div>
+            </div>
+            <div class="col-sm-12" id="viewhienthuc">
+                đây là hiện thực
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ft" style="position:absolute;bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;">
+
+</div>
+</body>
+</html>
