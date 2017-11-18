@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#webcanhan").on('click', function () {
+                window.location.href = "http://nguyentanhau15130052.azurewebsites.net/";
+            });
+            $("#facebook").on('click', function () {
+                window.location.href = "facebook.com";
+            });
+            $("#cv").on('click', function () {
+                window.location.href = "haucv.html";
+            });
+            $("#youtube").on('click', function () {
+                window.location.href = "youtube.com";
+            });
+        });
+    </script>
+</head>
+<body>
+
+
+<div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="row panel">
+        <div class="col-md-4 bg_blur ">
+            <a href="" class="follow_btn hidden-xs">Follow me</a>
+        </div>
+        <div class="col-md-8  col-xs-12">
+            <img src="images/profile.jpg" class="img-thumbnail picture hidden-xs"/>
+            <img src="images/profile.jpg"
+                 class="img-thumbnail visible-xs picture_mob"/>
+            <div class="header">
+                <h1>Nguyễn Tấn Hậu</h1>
+                <h4>Web Developer | Game designer</h4>
+                <p>Địa chỉ: Khu phố 6, Linh Trung, Thủ Đức</p>
+                <p>Số điện thoại: 0966490297</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row nav">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-10 col-xs-12" style="margin: 0px;padding: 0px;">
+            <div id="webcanhan" class="col-md-3 col-xs-4 well"><i class="fa fa-life-ring" aria-hidden="true"></i> Web cá nhân</div>
+            <div id="facebook" class="col-md-3 col-xs-4 well"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</div>
+            <div id="youtube" class="col-md-3 col-xs-4 well"><i class="fa fa-youtube-play" aria-hidden="true"></i> Youtube</div>
+            <div id="cv" class="col-md-3 col-xs-4 well"><i class="fa fa-id-card-o" aria-hidden="true"></i> CV</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

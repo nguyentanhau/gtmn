@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập lab 3</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap.min.js"></script>
+    <link href="../../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../../css/animate.min.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../js/html5shiv.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../images/ico/favicon.ico">
+    <script src="lab3.js"></script>
+    <link href="lab2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("../../menu.html");
+            $("#ft").load("../../footer.html");
+
+            $("#viewhienthuc").hide();
+            $("#viewyeucau").show();
+            $("#viewthietke").hide();
+
+            $("#yeucau").on('click', function () {
+                $("#viewhienthuc").hide();
+                $("#viewyeucau").show();
+                $("#viewthietke").hide();
+            });
+            $("#thietke").on('click', function () {
+                $("#viewhienthuc").hide();
+                $("#viewyeucau").hide();
+                $("#viewthietke").show();
+
+                $("#viewus").show();
+                $("#viewform").hide();
+                $("#viewfile").hide();
+
+            });
+            $("#hienthuc").on('click', function () {
+                $("#viewhienthuc").show();
+                $("#viewyeucau").hide();
+                $("#viewthietke").hide();
+            });
+
+            $("#us").on('click', function () {
+                $("#viewus").show();
+                $("#viewform").hide();
+                $("#viewfile").hide();
+            });
+            $("#file").on('click', function () {
+                $("#viewus").hide();
+                $("#viewform").hide();
+                $("#viewfile").show();
+            });
+            $("#form").on('click', function () {
+                $("#viewus").hide();
+                $("#viewform").show();
+                $("#viewfile").hide();
+            });
+
+        });
+    </script>
+</head>
+<body>
+<header id="header">
+
+</header>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-info" id="yeucau">Yêu cầu lab3</button>
+            <button class="btn btn-info" id="thietke">Thiết kế</button>
+            <button class="btn btn-info" id="hienthuc">Hiện thực</button>
+        </div>
+        <br><br>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12" id="viewyeucau">
+                <h3>Yêu cầu lab3 </h3>
+                <p>Bài 1: Thiết kế một trang Web đơn giản sử dụng mẫu F-pattern ==> chuyển sang html</p>
+                <p>Bài 2: Thiết kế một trang Web sử dụng mẫu Z-pattern ==> chuyển sang html
+                    Upload lên Azure</p>
+            </div>
+            <div class="col-sm-12" id="viewthietke">
+
+            </div>
+            <div class="col-sm-12" id="viewhienthuc">
+                <a class="btn btn-info" href="Zpattern.html">Z pattern</a>
+                <a href="Fpattern.html" class="btn btn-info">F pattern</a>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+</body>
+</html>
